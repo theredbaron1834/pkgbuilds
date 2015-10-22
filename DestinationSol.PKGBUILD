@@ -1,5 +1,5 @@
 # Maintainer: Stephen Bell <theredbaron1834 @ yahoo.com>
-pkgname=DestinationSol
+pkgname=destinationsol
 pkgrel=1
 pkgver=1.3.1
 pkgdesc="2D Space Arcade/RPG with Planets"
