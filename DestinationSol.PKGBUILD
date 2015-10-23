@@ -1,7 +1,7 @@
 # Maintainer: Stephen Bell <theredbaron1834 @ yahoo.com>
 pkgname=destinationsol
 pkgrel=1
-pkgver=1.3.1
+pkgver="$(curl http://jenkins.terasology.org/job/DestinationSol/ | grep "Last successful build" | sed -e 's/>/\n/g' -e 's/</\n/g' -e 's/,/\n/g' | grep "Last successful build" | sed 's/ /\n/g' | grep "(#" | sed -e 's/(#//g' -e 's/)//g')"
 pkgdesc="2D Space Arcade/RPG with Planets"
 arch=('i686' 'x86_64')
 url="https://github.com/MovingBlocks/DestinationSol"
@@ -13,7 +13,7 @@ build() {
   mkdir "$srcdir/DestinationSol"
   cd "$srcdir"/DestinationSol
   msg "Grabbing files...."
-  curl https://github.com/MovingBlocks/DestinationSol/releases/download/v1.3.1/DestinationSol.zip -L -o DestinationSol.zip
+  curl jenkins.terasology.org/job/DestinationSol/lastSuccessfulBuild/artifact/desktop/build/distributions/DestinationSol.zip -L -o DestinationSol.zip
   unzip DestinationSol.zip
 }
 
