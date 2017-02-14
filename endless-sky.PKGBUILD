@@ -3,8 +3,8 @@
 pkgname=endless-sky-git
 pkgver=20151021.a1ed871
 pkgrel=1
-pkgdesc='A Minecraft-inspired game for the terminal '
-url='https://github.com/itsapi/pycraft'
+pkgdesc='A galaxy lies open for you to explore. Endless Sky is a 2D space trading and combat game similar to the classic Escape Velocity series. Explore other star systems.'
+url='https://endless-sky.github.io/'
 arch=('i686' 'x86_64')
 license=('GPL V2')
 makedepends=('git')
