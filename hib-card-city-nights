@@ -1,0 +1,63 @@
+# Maintainer: Stephen <theredbron1834@yahoo.com>
+
+pkgname=hib-card-city-nights
+pkgver=1.0
+pkgrel=1
+pkgdesc="Adventure and Cards now back together! And remember, it's always night in space."
+url="http://cardcitynights.com/"
+license=('custom')
+arch=('i686' 'x86_64')
+depends=('gtk2')
+depends_x86_64=('lib32-gtk2')
+depends_i686=('gtk2')
+source=("hib://cardcitynights_linux.zip")
+sha256sums=('b41274a6d45789e42305cf263ba476ad3d0e8ab00a26a0e65c248b698340b985')
+
+# You need to download the Humble Bundle file manually or you can configure
+# DLAGENTS in makepkg.conf to auto-download.
+#
+# For example, hib-dlagent (https://aur.archlinux.org/packages/hib-dlagent/)
+# can be used to download files. Add something like this in your makepkg.conf
+# (you need to tweak the options to your needs):
+# DLAGENTS+=('hib::/usr/bin/hib-dlagent -k $KEY -u $USER -p $PASS -o %o %u')
+#
+# The following is just a fallback to the above to notify the user:
+DLAGENTS+=("hib::/usr/bin/echo %u - This is is not a real URL, you need to download the humble bundle file manually to \"$PWD\" or setup a hib:// DLAGENT. Read this PKGBUILD for more information.")
+
+# Prevent compressing package
+PKGEXT='.pkg.tar'
+
+package(){
+    cd "$srcdir"
+    # Install game
+    echo "[Desktop Entry]
+Name=Card City Nights
+Comment=Adventure and Cards now back together! And remember, it's always night in space.
+Exec=hib-card-city-nights
+Icon=hib-card-city-nights
+Type=Application
+Terminal=false
+StartupNotify=true
+Categories=Game;AudioVideo;
+Encoding=UTF-8" >> ${pkgname}.desktop
+
+    echo "#!/bin/sh
+cd /opt/${pkgname}/
+/opt/${pkgname}/ccn.x86" > $pkgname
+
+    install -d "${pkgdir}/opt/${pkgname}/"
+    install -d "${pkgdir}/usr/bin/"
+    install -d "${pkgdir}/usr/share/pixmaps/"
+    cp -r "ccn_Data" "${pkgdir}/opt/${pkgname}/"
+    # using straight cp on the supplied tarball tends to have screwy permissions
+    find "${pkgdir}/opt/${pkgname}" -type d -exec chmod 755 {} \;
+    install -Dm755 "ccn.x86" \
+        "${pkgdir}/opt/${pkgname}/"
+    # Desktop integration
+    install -Dm644 "ccn_Data/Resources/UnityPlayer.png" \
+        "${pkgdir}/usr/share/pixmaps/${pkgname}.png"
+    install -Dm644 "${srcdir}/${pkgname}.desktop" \
+        "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+
+    install -Dm755 "$srcdir/$pkgname" "$pkgdir/usr/bin/$pkgname"
+}
