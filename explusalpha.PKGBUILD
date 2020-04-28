@@ -12,21 +12,21 @@ makedepends=('tar')
 build() {
 
     msg "Grabbing emu...."
-#  curl 'http://www.explusalpha.com/home/general-info/platforms/linux/explusalpha.com%20Emu%20Bundle%201.5.14.tar.xz?attredirects=0'  -L -o emu.tar.xz
+curl 'http://www.explusalpha.com/home/general-info/platforms/linux/explusalpha.com%20Emu%20Bundle%201.5.14.tar.xz?attredirects=0'  -L -o emu.tar.xz
     tar xf emu.tar.xz
     msg "Grabbing icons...."
     install -m777 -d icons
-#    curl 'https://upload.wikimedia.org/wikipedia/commons/9/95/MSX-Logo.svg' -L -o icons/MSX.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/en/f/f3/Neo_Geo_logo.svg' -L -o icons/Neo.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/en/0/08/Atari_2600_logo.svg' -L -o icons/Atari.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Gameboy_advance_logo.svg' -L -o icons/GBA.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/commons/9/90/Game_Boy_Color_Logo.svg' -L -o icons/GBC.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/commons/7/74/Sega_genesis_logo.svg' -L -o icons/Genesis.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/commons/0/0d/NES_logo.svg' -L -o icons/NES.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/SNK_NeoGeo_Pocket_logo.png/461px-SNK_NeoGeo_Pocket_logo.png' -L -o icons/NGP.png
-#    curl 'https://upload.wikimedia.org/wikipedia/en/4/4e/PC_Engine_logo.png' -L -o icons/PCE.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/en/4/42/SegaSaturn.png' -L -o icons/Saturn.svg
-#    curl 'https://upload.wikimedia.org/wikipedia/commons/3/33/Super_Nintendo_Entertainment_System_logo.svg' -L -o icons/SNES.svg
+curl 'https://upload.wikimedia.org/wikipedia/commons/9/95/MSX-Logo.svg' -L -o icons/MSX.svg
+curl 'https://upload.wikimedia.org/wikipedia/en/f/f3/Neo_Geo_logo.svg' -L -o icons/Neo.svg
+curl 'https://upload.wikimedia.org/wikipedia/en/0/08/Atari_2600_logo.svg' -L -o icons/Atari.svg
+curl 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Gameboy_advance_logo.svg' -L -o icons/GBA.svg
+curl 'https://upload.wikimedia.org/wikipedia/commons/9/90/Game_Boy_Color_Logo.svg' -L -o icons/GBC.svg
+curl 'https://upload.wikimedia.org/wikipedia/commons/7/74/Sega_genesis_logo.svg' -L -o icons/Genesis.svg
+curl 'https://upload.wikimedia.org/wikipedia/commons/0/0d/NES_logo.svg' -L -o icons/NES.svg
+curl 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/SNK_NeoGeo_Pocket_logo.png/461px-SNK_NeoGeo_Pocket_logo.png' -L -o icons/NGP.png
+curl 'https://upload.wikimedia.org/wikipedia/en/4/4e/PC_Engine_logo.png' -L -o icons/PCE.svg
+curl 'https://upload.wikimedia.org/wikipedia/en/4/42/SegaSaturn.png' -L -o icons/Saturn.svg
+curl 'https://upload.wikimedia.org/wikipedia/commons/3/33/Super_Nintendo_Entertainment_System_logo.svg' -L -o icons/SNES.svg
 }
 
 package() {
