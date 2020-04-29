@@ -3,7 +3,7 @@
 pkgname=explusalpha
 pkgrel=1
 pkgver=1.5.14
-pkgdesc="A collection of Emus."
+pkgdesc="A collection of Emulators for retro gaming systems"
 arch=('x86_64')
 url="http://www.explusalpha.com"
 license=('GPLv3')
