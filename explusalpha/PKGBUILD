@@ -7,7 +7,7 @@ pkgdesc="A collection of Emulators for retro gaming systems"
 arch=('x86_64')
 url="http://www.explusalpha.com"
 license=('GPLv3')
-depends=('gtk3' 'lib32-bluez-libs')
+depends=('gtk3' 'lib32-bluez-libs' 'libsndfile' 'minizip' 'bluez-libs')
 source=("$pkgname-$pkgver::http://www.explusalpha.com/home/general-info/platforms/linux/explusalpha.com%20Emu%20Bundle%201.5.14.tar.xz?attredirects=0"
         "icon-MSX.svg::https://upload.wikimedia.org/wikipedia/commons/9/95/MSX-Logo.svg"
         "icon-Neo.svg::https://upload.wikimedia.org/wikipedia/en/f/f3/Neo_Geo_logo.svg"
