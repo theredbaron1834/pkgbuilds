@@ -7,7 +7,7 @@ pkgdesc="A collection of Emulators for retro gaming systems"
 arch=('x86_64')
 url="http://www.explusalpha.com"
 license=('GPLv3')
-depends=('gtk3')
+depends=('gtk3' 'lib32-bluez-libs-5.52-1')
 source=("$pkgname-$pkgver::http://www.explusalpha.com/home/general-info/platforms/linux/explusalpha.com%20Emu%20Bundle%201.5.14.tar.xz?attredirects=0"
         "icon-MSX.svg::https://upload.wikimedia.org/wikipedia/commons/9/95/MSX-Logo.svg"
         "icon-Neo.svg::https://upload.wikimedia.org/wikipedia/en/f/f3/Neo_Geo_logo.svg"
@@ -17,8 +17,8 @@ source=("$pkgname-$pkgver::http://www.explusalpha.com/home/general-info/platform
         "icon-Genesis.svg::https://upload.wikimedia.org/wikipedia/commons/7/74/Sega_genesis_logo.svg"
         "icon-NES.svg::https://upload.wikimedia.org/wikipedia/commons/0/0d/NES_logo.svg"
         "icon-NGP.png::https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/SNK_NeoGeo_Pocket_logo.png/461px-SNK_NeoGeo_Pocket_logo.png"
-        "icon-PCE.svg::https://upload.wikimedia.org/wikipedia/en/4/4e/PC_Engine_logo.png"
-        "icon-Saturn.svg::https://upload.wikimedia.org/wikipedia/en/4/42/SegaSaturn.png"
+        "icon-PCE.png::https://upload.wikimedia.org/wikipedia/en/4/4e/PC_Engine_logo.png"
+        "icon-Saturn.png::https://upload.wikimedia.org/wikipedia/en/4/42/SegaSaturn.png"
         "icon-SNES.svg::https://upload.wikimedia.org/wikipedia/commons/3/33/Super_Nintendo_Entertainment_System_logo.svg"
         "Explusalpha2600.desktop" "ExplusalphaGBA.desktop" "ExplusalphaGBC.desktop" "ExplusalphaMD.desktop" "ExplusalphaMSX.desktop"
         "ExplusalphaNeo.desktop" "ExplusalphaNES.desktop" "ExplusalphaNGP.desktop" "ExplusalphaPCE.desktop" "ExplusalphaSNES9x.desktop"
@@ -34,8 +34,8 @@ md5sums=('abd630033cf29bc26c76953d56c6a914' 'a3078f8ec9b5e8368202229bb74c876d'
          '750c6bfcb8b2fa7453ed8755b3c0c9d4' '3569168442e5ba4324af73a56ccbb05c'
          '12ca4ae93b0be1783ed0dd9899b9dcfe' '7720245376db6c73129a47ff9286bcc3'
          '1241f92782f2cc9b7d63cbdfb9da41b5' '0a1c342ea41cead1189c3711bbfb3a09'
-         '31b8b1aebff541f847976ae56b199b99' '3d2f80937678f1d7e62658e668cc0261'
-         'e377868b88d8614ca7ba87e72d1e7c36')
+         '76843a80d85e55827e9510f02425f1f4' '3a7ad6420b678ebe8579fa4dd0653de8'
+         'b3f90aa6c1c2c81db36d727f1fbc041a')
 _SRCNAME="explusalpha.com Emu Bundle 1.5.14"
 
 package() {

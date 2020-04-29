@@ -2,7 +2,7 @@
 Name=SNES.emu
 GenericName=SNES.emu
 Comment=A feature full Super Nintendo emulator.
-Exec=/opt/ExplusalphaEmu/SNES9x.emu/s9xp
+Exec=/opt/ExplusalphaEmu/Snes9x\ EX+/s9xp
 Icon=/opt/ExplusalphaEmu/icons/icon-SNES.svg
 Terminal=false
 Type=Application
